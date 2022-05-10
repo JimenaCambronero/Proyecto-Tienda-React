@@ -11,24 +11,24 @@ const Item = ({ list }) => {
             <h2 className="mb-2 text-base font-bold underline uppercase text-black-400 ">
               {name}
             </h2>
-            <p className="text-sm font-semibold text-gray-700 inline-blok">
+            {/* <p className="text-sm font-semibold text-gray-700 inline-blok">
                 {category}
-              </p>
+              </p> */}
             <div>
-              <p className="text-sm font-semibold text-gray-700 inline-blok">
+              <p className="pb-2 text-xs font-semibold text-gray-700 inline-blok">
                 {description}
               </p>
             </div>
-            <div>
+            {/* <div>
               <p className="pb-2 text-xs font-thin">{comments}</p>
-            </div>
+            </div> */}
             <div>
               <p className="pt-2 text-sm text-gray-700 border-t border-gray-300">{price}</p>
             </div>
   
             <div>
-              <button className="px-4 py-2 text-xs text-white duration-200 bg-red-600 rounded-lg hover:bg-red-400 transition-color focus:outline-none"> Comprar
-              </button>
+              {/* <button className="px-4 py-2 text-xs text-white duration-200 bg-red-600 rounded-lg hover:bg-red-400 transition-color focus:outline-none"> Comprar
+              </button> */}
               <button className="px-4 py-2 text-xs text-white duration-200 bg-red-600 rounded-lg hover:bg-red-400 transition-color focus:outline-none"> 
               <Link to={`/detalleProducto/${id}`}>Ver mas detalle </Link>
               </button>

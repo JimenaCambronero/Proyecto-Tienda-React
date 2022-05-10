@@ -7,7 +7,7 @@ const ItemList = () => {
   return (
     
    <div className="w-full h-full">
-      <div className="flex flex-wrap w-4/5 h-full mx-auto bg-gradient-to-b from-gray-100">
+      <div className="flex flex-wrap">
         <ItemListContainer/>    
       </div>
     </div>
