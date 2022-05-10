@@ -1,21 +1,30 @@
 import React, { useEffect, useState } from "react";
 import Item from "./Item"
 import { listData } from "../data/listData";
+import { useParams } from "react-router-dom";
 import Spinner from "./Spinner";
 
 
 function ItemListContainer() {
 
-
+  const {categoryId} = useParams ()
   const [list, setList] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getList().then(data => {
-      setList(data);
-      setLoading(false);
-    });
-  }, []);
+    if (categoryId === undefined) {
+      getList().then((data) => {
+        setList (data);
+        setLoading (false);
+      });
+    }else {
+      getList().then((data) => {
+        setList(data.filter((list) => list.category === categoryId));
+        setLoading(false);
+      });
+    }
+    }, [categoryId]);
+  
 
   const getList = () => {
     return new Promise((resolve) => {

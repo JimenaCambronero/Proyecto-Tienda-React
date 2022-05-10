@@ -39,7 +39,7 @@ const NavBar = () => {
           <div>
             {show ? (
               <ul className="flex justify-center py-4 space-x-6 text-xs font-medium text-gray-800 uppercase border-gray-200 select-none">
-                <Link to="/category/totes">Totes</Link>
+                <Link to="/category/tote">Totes</Link>
                 <Link to="/category/home"> Hogar</Link>
                 <Link to="/category/accesorios">Accesorios</Link>
               </ul>
