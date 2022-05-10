@@ -26,9 +26,7 @@ const Item = ({ list }) => {
               <p className="pt-2 text-sm text-gray-700 border-t border-gray-300">{price}</p>
             </div>
   
-            <div>
-              {/* <button className="px-4 py-2 text-xs text-white duration-200 bg-red-600 rounded-lg hover:bg-red-400 transition-color focus:outline-none"> Comprar
-              </button> */}
+            <div>    
               <button className="px-4 py-2 text-xs text-white duration-200 bg-red-600 rounded-lg hover:bg-red-400 transition-color focus:outline-none"> 
               <Link to={`/detalleProducto/${id}`}>Ver mas detalle </Link>
               </button>

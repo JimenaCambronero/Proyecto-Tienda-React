@@ -27,6 +27,9 @@ const ItemDetail = ({item}) => {
             </p>
             <p className="pb-3 text-sm">{item.comments}</p>
             <hr className="w-full border-gray-200 mt4" />
+            <div className="pt-4">
+              <button className="px-4 py-2 text-xs text-white duration-200 bg-red-600 rounded-lg hover:bg-red-400 transition-color focus:outline-none"> Comprar</button>
+            </div>
           </div>
         </div>
       </div>

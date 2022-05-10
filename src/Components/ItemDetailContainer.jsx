@@ -1,8 +1,9 @@
 import React from 'react'
 import ItemDetail from './ItemDetail';
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import { listData}  from '../data/listData'
+import { useParams } from 'react-router-dom';
+import { listData}  from '../data/listData';
+import Spinner from './Spinner';
  
 
 const ItemDetailContainer = () => {
@@ -34,8 +35,8 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-      {
-      loading ? <p>Loading...... :) </p>:
+      { loading ?  <Spinner></Spinner>
+      :
       <ItemDetail item={item}> </ItemDetail>
       }
     </div>

@@ -12,7 +12,6 @@ const NavBar = () => {
         <div className="relative max-auto">
           <div className="pt-1 pb-2 mx-7">
             <div className="flex items-center justify-between px-10 pb-2 border-b border-gray-200">
-              {/* logo */}
               <Link to="/" className="block cursor-pointer w-60">
                 <img
                   className="w-20 h-20 rounded-full p-b "
@@ -28,8 +27,7 @@ const NavBar = () => {
                   </li>
                   <button
                     onClick={() => setShow(!show)}
-                    className="p-2 text-lg focus:outline-none"
-                  >
+                    className="p-2 text-lg focus:outline-none">
                     <Link to="/">Todos los Productos</Link>
                   </button>
                 </ul>
