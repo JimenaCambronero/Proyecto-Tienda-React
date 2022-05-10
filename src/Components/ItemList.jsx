@@ -1,40 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { listData } from "../data/listData";
-import Item from "./Item";
+
+
+import ItemListContainer from "./ItemListContainer";
 
 const ItemList = () => {
 
-  
-  const [list, setList] = useState([])
-  const [loading, setLoading] = useState (true)
-
-  useEffect(() => {
-    getList().then (data => {
-      setList (data)
-      setLoading (false)
-    })
-  }, [])
-
-  const getList = () => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(listData);
-      }, 2000);
-    })
-  }
-
-
   return (
     
-    <div className="grid grid-cols-1 gap-3 m-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:max-w-7xl">
-      {loading ? 
-        <p>Loading lista...</p>
-        :
-      list.map (l => <Item key={l.id} list={l}/>
-      )
-      }
+   <div className="w-full h-full">
+      <div className="flex flex-wrap w-4/5 h-full mx-auto bg-gradient-to-b from-gray-100">
+        <ItemListContainer/>    
+      </div>
     </div>
  )
 }
-
 export default ItemList
