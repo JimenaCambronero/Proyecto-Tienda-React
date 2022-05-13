@@ -7,13 +7,10 @@ import Spinner from './Spinner';
  
 
 const ItemDetailContainer = () => {
-
-
-
-  const {itemId } = useParams()
-
   const [item, setItem] = useState({})
   const [loading, setLoading] = useState (true)
+
+  const {itemId } = useParams()
 
   useEffect(() => {
    getItem().then (data => {
@@ -24,10 +21,10 @@ const ItemDetailContainer = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   [itemId])
   
-
   const getItem = () => {
     return new Promise( (resolve) => {
       setTimeout( () => {
+        // eslint-disable-next-line eqeqeq
         resolve(listData.find(i => i.id == itemId))
       }, 2000);
     })
@@ -35,10 +32,13 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-      { loading ?  <Spinner></Spinner>
-      :
-      <ItemDetail item={item}> </ItemDetail>
-      }
+        { loading ?  
+          <Spinner/>
+          :
+        <ItemDetail 
+          item={item}> 
+        </ItemDetail>
+        }
     </div>
   )
   }

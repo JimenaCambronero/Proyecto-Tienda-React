@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Item from "./Item"
 import { listData } from "../data/listData";
 import { useParams } from "react-router-dom";
+import Item from './Item'
 import Spinner from "./Spinner";
 
 
@@ -24,8 +24,7 @@ function ItemListContainer() {
       });
     }
     }, [categoryId]);
-  
-
+ 
   const getList = () => {
     return new Promise((resolve) => {
       setTimeout(() => {

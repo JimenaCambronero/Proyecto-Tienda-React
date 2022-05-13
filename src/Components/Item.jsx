@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Item = ({ list }) => {
-  const { id, name, category, price, description, comments, img } = list;
+  const { id, name, price, description, img } = list;
 
   return (
     <div className="relative overflow-hidden rounded shadow-lg group">
@@ -11,17 +11,11 @@ const Item = ({ list }) => {
             <h2 className="mb-2 text-base font-bold underline uppercase text-black-400 ">
               {name}
             </h2>
-            {/* <p className="text-sm font-semibold text-gray-700 inline-blok">
-                {category}
-              </p> */}
             <div>
               <p className="pb-2 text-xs font-semibold text-gray-700 inline-blok">
                 {description}
               </p>
             </div>
-            {/* <div>
-              <p className="pb-2 text-xs font-thin">{comments}</p>
-            </div> */}
             <div>
               <p className="pt-2 text-sm text-gray-700 border-t border-gray-300">{price}</p>
             </div>

@@ -5,12 +5,11 @@ import {GiHamburgerMenu} from 'react-icons/gi'
 
 const BurguerButton = () => {
   return (
-    <div>
+    <>
         <Burger>
             <GiHamburgerMenu/>
-        </Burger>
-        
-    </div>
+        </Burger> 
+    </>
   )
 }
 

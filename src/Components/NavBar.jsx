@@ -3,8 +3,10 @@ import CardWidget from "./CardWidget";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
+
 const NavBar = () => {
   const [show, setShow] = useState(true);
+  
 
   return (
     <>
@@ -32,7 +34,8 @@ const NavBar = () => {
                   </button>
                 </ul>
               </div>
-              <CardWidget />
+              
+              <CardWidget/>
               {/* <BurguerButton/> */}
             </div>
           </div>
