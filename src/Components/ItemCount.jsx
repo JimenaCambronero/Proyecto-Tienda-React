@@ -1,9 +1,11 @@
 import React, { useState } from "react"
 import { useAppContext } from "../context/AppContext"
 import { useCartContext } from "../context/CartContext"
+import { HiOutlineMinus } from "react-icons/hi";
+import { HiOutlinePlus } from "react-icons/hi";
 
-const ItemCount = ({ stock, onAdd, id }) => {
-	const [count, setCount] = useState(0)
+const ItemCount = ({ stock, onAdd, id, }) => {
+	const [count, setCount] = useState(1)
 
 	const { addToCart } = useCartContext()
 	const { products } = useAppContext()
@@ -14,7 +16,7 @@ const ItemCount = ({ stock, onAdd, id }) => {
 		}
 	}
 	const handleRemove = () => {
-		if (count > 0) {
+		if (count > 1) {
 			setCount(count - 1)
 		}
 	}
@@ -33,14 +35,14 @@ const ItemCount = ({ stock, onAdd, id }) => {
 
 	return (
 		<>
-			<div className="">
-				<div className="">
-					<button className="" onClick={handleRemove}>
-						<i className=""></i>
+			<div className="flex items-center gap-4 mt-4">
+				<div className="flex flex-row space-x-4">
+					<button className="p-2 bg-gray-200 focus:outline-none" onClick={handleRemove}>
+						<HiOutlineMinus/>
 					</button>
-					<label className="">{count}</label>
-					<button className="" onClick={handleAdd}>
-						<i className=""></i>
+					<label className="p-2">{count}</label>
+					<button className="p-2 bg-gray-200 focus:outline-none" onClick={handleAdd}>
+					<HiOutlinePlus/>
 					</button>
 				</div>
 				<div>

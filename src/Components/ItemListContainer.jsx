@@ -39,6 +39,10 @@ function ItemListContainer() {
         {loading ?
         <Spinner></Spinner>
           :
+
+            
+
+
           list.map(l => <Item key={l.id} list={l} />
           )}
       </div>  
