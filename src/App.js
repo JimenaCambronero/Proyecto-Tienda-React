@@ -5,8 +5,9 @@ import ItemListContainer from './Components/ItemListContainer';
 import ItemDetailContainer from './Components/ItemDetailContainer';
 import NotFound404 from './pages/NotFound404';
 import Footer from './Components/Footer';
-import CartContextProvider from './context/CartContext';
-import AppContextProvider from './context/AppContext';
+
+ import CartContextProvider from './context/CartContext';
+ import AppContextProvider from './context/AppContext';
 
 
 function App() { 
@@ -14,7 +15,7 @@ function App() {
  
   return (
 
-  <AppContextProvider>
+   <AppContextProvider>
    <CartContextProvider>
       <BrowserRouter>
         <Navbar/>        
@@ -35,7 +36,7 @@ function App() {
         <Footer/>
       </BrowserRouter>
     </CartContextProvider>
-  </AppContextProvider>
+   </AppContextProvider>
    
   );
 }

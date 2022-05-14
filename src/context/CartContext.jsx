@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 
-const CartContext = createContext ()
+const CartContext = createContext()
 
 export const useCartContext = () => useContext(CartContext)
 
@@ -9,15 +9,16 @@ const CartContextProvider = ({children}) => {
 const [cart, setCart] = useState ([])
 
 // Esta el item en el carrito?
-const isInCart = (id) => cart.find (producto => producto.id === id)
+const isInCart = (id) => cart.find ((producto) => producto.id === id)
 
 //Agregar producto
 const addToCart = (producto, cantidad) => { 
     const newCart = [...cart]
+
     const productIsInCart = isInCart (producto.id)
 
-    if (productIsInCart){
-      newCart[newCart.findIndex (prod => prod.id ===productIsInCart.id)].quantity += cantidad
+    if (productIsInCart) {
+      newCart[newCart.findIndex ((prod) => prod.id ===productIsInCart.id)].quantity += cantidad
 
       setCart(newCart)
       return

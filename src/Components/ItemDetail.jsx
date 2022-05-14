@@ -1,10 +1,11 @@
-/* eslint-disable react/jsx-no-undef */
-import React, { useState } from "react";
+import { Link } from "react-router-dom";
+ import React, { useState } from "react";
 import ItemCount from "./ItemCount";
 
 
-const ItemDetail = ({item, stock, id}) => {
+const ItemDetail = ({item, id, stock}) => {
 
+  //producto detalle
   const [terminarCompra, setTerminarCompra] = useState (false)
   
   const onAdd = (count) => {
@@ -36,11 +37,14 @@ const ItemDetail = ({item, stock, id}) => {
                       <div className="pt-4">
                       {terminarCompra ? ( 
                     
-                        <Link to ='/cart' className="px-4 py-2 text-xs text-white duration-200 bg-red-600 rounded-lg hover:bg-red-400 transition-color focus:outline-none"> Terminar Comprar</Link>
-                      ) : ( 
+                        <Link to ='/cart' className="px-4 py-2 text-xs text-white duration-200 bg-red-600 rounded-lg hover:bg-red-400 transition-color focus:outline-none"> 
+                        Terminar Comprar
+                        </Link>
+                      ) : (  
 
-                        <ItemCount stock= {stock} onAdd={onAdd} id={id}/>
+                         <ItemCount stock= {stock} onAdd={onAdd} id={id}/>
                       )}
+
                       </div>
                 </div>
             </div>

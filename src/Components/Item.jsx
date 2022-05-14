@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+//producto presentacion
+
 const Item = ({ list }) => {
-  const { id, name, price, description, img } = list;
+  const { id, name, category, price, comments, stock, description, img } = list;
 
   return (
     <div className="relative overflow-hidden rounded shadow-lg group">

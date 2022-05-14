@@ -1,12 +1,14 @@
 import React, { createContext, useEffect, useState, useContext} from 'react'
 
+import listData from '../data/listData'
+
 const AppContext = createContext()
 
 export const useAppContext = () => useContext(AppContext)
 
 const AppContextProvider = ({children}) => {
 
-    const [products, setProducts] = useState ([])
+    const [products, setProducts] = useState ([listData])
 
 
     useEffect (()=> {

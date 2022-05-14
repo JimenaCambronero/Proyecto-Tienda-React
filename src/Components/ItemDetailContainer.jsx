@@ -36,7 +36,9 @@ const ItemDetailContainer = () => {
           <Spinner/>
           :
         <ItemDetail 
-          item={item}> 
+          item={item}
+          stock={item.stock}
+          id={item.id}> 
         </ItemDetail>
         }
     </div>
