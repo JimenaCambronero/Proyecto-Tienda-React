@@ -1,17 +1,19 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-undef */
 import React, { useState } from "react"
-import { useAppContext } from "../context/AppContext"
 import { useCartContext } from "../context/CartContext"
 import { HiOutlineMinus } from "react-icons/hi";
 import { HiOutlinePlus } from "react-icons/hi";
 
-const ItemCount = ({ stock, onAdd, id, }) => {
+
+const ItemCount = (props) => {
 	const [count, setCount] = useState(1)
 
-	const { addToCart } = useCartContext()
-	const { products } = useAppContext()
-
+	const { products } = useCartContext()
+	
+	
 	const handleAdd = () => {
-		if (count < stock) {
+		if (count < props.stock) {
 			setCount(count + 1)
 		}
 	}
@@ -47,8 +49,8 @@ const ItemCount = ({ stock, onAdd, id, }) => {
 				</div>
 				<div>
 					<button
-						className="px-4 py-2 text-xs text-white duration-200 bg-red-600 rounded-lg hover:bg-red-400 transition-color focus:outline-none"
-						onClick={() => handleClick(id, count)}
+						className="px-4 py-2 text-sm tracking-widest text-white duration-200 bg-red-600 rounded-lg hover:bg-red-400 transition-color focus:outline-none font-shadows"
+						onClick={() => props.onAdd(count)}
 					>
 						Agregar al Carrito
 					</button>

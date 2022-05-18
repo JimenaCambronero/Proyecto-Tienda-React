@@ -4,7 +4,17 @@ module.exports = {
   ],
   purge: [],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        // imprenta lineal
+        'amastic':'Amatic SC',
+        //titulos
+        'boogaloo':'Boogaloo',
+        // despedidda
+        'shadows':'Shadows Into Light',
+
+      },
+    },
   },
   variants: {},
   plugins: [],

@@ -1,6 +1,7 @@
 import React from "react"
 import ItemListContainer from "./ItemListContainer"
 
+
 const ItemList = () => {
 
   return (
@@ -8,7 +9,9 @@ const ItemList = () => {
    <div className="w-full h-full">
       <div className="flex flex-wrap">
         <ItemListContainer/>    
+       
       </div>
+     
     </div>
  )
 }

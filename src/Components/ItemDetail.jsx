@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
  import React, { useState } from "react";
 import ItemCount from "./ItemCount";
+import { useCartContext } from "../context/CartContext";
 
 
 const ItemDetail = ({item, id, stock}) => {
-
-  //producto detalle
   const [terminarCompra, setTerminarCompra] = useState (false)
+  const {addToCart} = useCartContext()
   
   const onAdd = (count) => {
     setTerminarCompra (true)
+   
   console.log (count)
   }
 
@@ -20,29 +21,29 @@ const ItemDetail = ({item, id, stock}) => {
                     <img src={item.img} alt="imagen" />
                   </div>
                 <div className="w-full px-6 lg:py-6 lg:w-1/2">
-                      <h1 className="pb-3 text-lg font-medium tracking-wider text-gray-800 uppercase"> {item.name} </h1>
-                      <p>{item.price}</p>
+                      <h1 className="pb-3 text-lg font-medium tracking-wider text-gray-800 uppercase font-boogaloo"> {item.name} </h1>
+                      <p className="font-boogaloo">{item.price}</p>
                       <p>{item.category}</p>
-                      <p className="pt-3 pb-2 text-base font-medium tracking-wider text-gray-700 uppercase">
+                      <p className="pt-3 pb-2 text-base font-medium tracking-wider text-gray-700 uppercase font-boogaloo">
                         Descripción
                       </p>
-                      <p className="pb-3 text-sm">{item.description}</p>
-                      <hr className="w-full border-gray-200 mt4" />
-                      <p className="pt-3 pb-2 text-base font-medium tracking-wider text-gray-700 uppercase">
+                      <p className="pb-3 text-lg font-bold tracking-wider text-gray-800 font-amastic">{item.description}</p>
+                      <hr className="w-full mt-1 border-gray-200" />
+                      <p className="pt-3 pb-2 text-base font-medium tracking-wider text-gray-700 uppercase font-boogaloo ">
                         Detalle del Producto
                       </p>
-                      <p className="pb-3 text-sm">{item.comments}</p>
-                      <hr className="w-full border-gray-200 mt4" />
+                      <p className="pb-3 text-lg font-bold tracking-wider font-amastic">{item.comments}</p>
+                      <hr className="w-full mt-1 border-gray-200" />
 
                       <div className="pt-4">
                       {terminarCompra ? ( 
                     
-                        <Link to ='/cart' className="px-4 py-2 text-xs text-white duration-200 bg-red-600 rounded-lg hover:bg-red-400 transition-color focus:outline-none"> 
+                        <Link to ='/cart'> 
                         Terminar Comprar
                         </Link>
                       ) : (  
 
-                         <ItemCount stock= {stock} onAdd={onAdd} id={id}/>
+                         <ItemCount stock= {stock} onAdd={onAdd} id={id} />
                       )}
 
                       </div>

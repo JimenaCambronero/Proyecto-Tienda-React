@@ -2,54 +2,62 @@
 import CardWidget from "./CardWidget";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import LogoNavBar from './LogoNavBar';
 
 
 const NavBar = () => {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   
+  const cambiarTexto =(e) => {
+    if(e.target.innerHTML === 'Ver Categorias'){
+      e.target.innerHTML = 'Ocultar Categorias';
+    }else{
+      e.target.innerHTML='Ver Categorias';
+    }
+  }
 
   return (
     <>
-      <div className="bg-gray-100">
+      <div className="bg-gray-300">
         <div className="relative max-auto">
-          <div className="pt-1 pb-2 mx-7">
+          <div className="pt-1 mx-7">
             <div className="flex items-center justify-between px-10 pb-2 border-b border-gray-200">
-              <Link to="/" className="block cursor-pointer w-60">
-                <img
-                  className="w-20 h-20 rounded-full p-b "
-                  src="https://simonscat.com/wp-content/uploads/2014/09/website-buttons_v2-03.jpg"
-                  alt="logo"
-                />
+              <Link to="/" className="block w-60">
+                <LogoNavBar/>
               </Link>
 
-              <div className="hidden font-mono lg:block">
+              <div className="hidden lg:block">
                 <ul className="flex items-center space-x-7">
-                  <li className="p-2 text-lg">
+                  <li className="p-2 text-xl tracking-widest text-gray-800 uppercase font-boogaloo">
                     <Link to="/">Home</Link>
                   </li>
                   <button
                     onClick={() => setShow(!show)}
-                    className="p-2 text-lg focus:outline-none">
-                    <Link to="/">Todos los Productos</Link>
+                    className="p-2 text-xl tracking-widest text-gray-800 uppercase font-boogaloo focus:outline-none">
+                    <Link to="/" onClick ={cambiarTexto} >Ver Categorias</Link>
                   </button>
                 </ul>
-              </div>
-              
-              <CardWidget/>
+              </div> 
+              <CardWidget/>    
               {/* <BurguerButton/> */}
             </div>
           </div>
+          <hr className="w-full mb-1 border-gray-400" />
           <div>
             {show ? (
-              <ul className="flex justify-center py-4 space-x-6 text-xs font-medium text-gray-800 uppercase border-gray-200 select-none">
+              <ul className="flex justify-center py-2 space-x-6 text-xs font-medium tracking-widest text-gray-600 uppercase select-none font-boogaloo ">
                 <Link to="/category/tote">Totes</Link>
                 <Link to="/category/home"> Hogar</Link>
                 <Link to="/category/accesorios">Accesorios</Link>
               </ul>
-            ) : null}
+            ) :
+             <>
+             </> }
           </div>
         </div>
       </div>
+     
+      
     </>
   );
 };

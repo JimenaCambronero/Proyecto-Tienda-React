@@ -2,6 +2,7 @@ import React from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
+
 const Footer = () => {
   const styles = {
     text: "font-regular text-xs text-gray-700 tracking-wide leading-normal",
@@ -9,7 +10,9 @@ const Footer = () => {
   };
 
   return (
+    
     <footer>
+     
       <div className={styles.text + "mx-6 pt-3 pb-4"}>
         <p className="flex flex-col justify-center pt-4 text-center border-t border-gray-200">
           2022 - Tienda-React -
@@ -37,6 +40,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+  
   );
 };
 export default Footer;

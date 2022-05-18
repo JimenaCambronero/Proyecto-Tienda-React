@@ -1,29 +1,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 //producto presentacion
 
 const Item = ({ list }) => {
   const { id, name, price, description, img } = list;
 
+  
+
   return (
-    <div className="relative overflow-hidden rounded shadow-lg group">
+    <div className="relative mt-4 overflow-hidden rounded shadow-lg group">
         <img className="w-full " src={img} alt="simon cat imagen" />
         <div className="px-4 py-4">
-            <h2 className="mb-2 text-base font-bold underline uppercase text-black-400 ">
+            <h2 className="mb-2 text-base tracking-wider text-gray-900 uppercase font-boogaloo">
               {name}
             </h2>
             <div>
-              <p className="pb-2 text-xs font-semibold text-gray-700 inline-blok">
+              <p className="inline-block pb-2 text-sm font-bold tracking-wide text-gray-700 font-amastic">
                 {description}
               </p>
             </div>
-            <div>
-              <p className="pt-2 text-sm text-gray-700 border-t border-gray-300">{price}</p>
-            </div>
-  
-            <div>    
-              <button className="px-4 py-2 text-xs text-white duration-200 bg-red-600 rounded-lg hover:bg-red-400 transition-color focus:outline-none"> 
+            <hr className="w-full mb-4 border-gray-300" />
+            <div className="flex justify-between border-gray-300">
+              <p className="inline-block pt-2 text-lg text-gray-700 font-boogaloo">{price}</p>
+             
+              <button className="px-4 py-2 text-xs tracking-widest text-white duration-200 bg-red-600 rounded-lg hover:bg-red-400 transition-color font-shadows focus:outline-none"> 
               <Link to={`/detalleProducto/${id}`}>Ver mas detalle </Link>
               </button>
             </div>
