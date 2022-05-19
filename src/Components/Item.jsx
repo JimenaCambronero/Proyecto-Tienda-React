@@ -7,8 +7,6 @@ import { Link } from "react-router-dom";
 const Item = ({ list }) => {
   const { id, name, price, description, img } = list;
 
-  
-
   return (
     <div className="relative mt-4 overflow-hidden rounded shadow-lg group">
         <img className="w-full " src={img} alt="simon cat imagen" />

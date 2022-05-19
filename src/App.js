@@ -6,8 +6,6 @@ import ItemDetailContainer from './Components/ItemDetailContainer';
 import NotFound404 from './Page/NotFound404';
 import Footer from './Components/Footer';
 import CartContextProvider from './context/CartContext';
-// import AppContextProvider from './context/AppContext';
-
 
 
 function App() { 
@@ -15,7 +13,7 @@ function App() {
  
   return (
 
-  // <AppContextProvider>
+
   <CartContextProvider>
       <BrowserRouter>
         <Navbar/>  
@@ -38,7 +36,7 @@ function App() {
         <Footer/>
       </BrowserRouter>
   </CartContextProvider>
-// </AppContextProvider>
+
    
   );
 }

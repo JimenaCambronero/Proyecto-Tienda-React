@@ -1,18 +1,21 @@
-import { Link } from "react-router-dom";
- import React, { useState } from "react";
-import ItemCount from "./ItemCount";
+import React, { useState } from "react";
 import { useCartContext } from "../context/CartContext";
+import ItemCount from "./ItemCount";
+import { Link } from "react-router-dom";
 
 
 const ItemDetail = ({item, id, stock}) => {
-  const [terminarCompra, setTerminarCompra] = useState (false)
-  const {addToCart} = useCartContext()
+  const [countToAdd, setCountToAdd] = useState(0);
+  const { addToCart, unitsPerProduct } = useCartContext();
   
-  const onAdd = (count) => {
-    setTerminarCompra (true)
-   
-  console.log (count)
-  }
+  const handleOnAdd = (count) => {
+    if (count + unitsPerProduct(id) > stock) {
+      const availableToAdd = stock - unitsPerProduct(id);
+      return alert(`Solamente podes agregar ${availableToAdd} productos`);
+    }
+    setCountToAdd(count);
+    addToCart(item, count);
+  };
 
   return (
         <div className="w-full p-6">
@@ -36,21 +39,16 @@ const ItemDetail = ({item, id, stock}) => {
                       <hr className="w-full mt-1 border-gray-200" />
 
                       <div className="pt-4">
-                      {terminarCompra ? ( 
-                    
-                        <Link to ='/cart'> 
-                        Terminar Comprar
-                        </Link>
-                      ) : (  
-
-                         <ItemCount stock= {stock} onAdd={onAdd} id={id} />
+                      {countToAdd === 0 ? ( 
+                         <ItemCount stock={stock}  initial={1}onAdd= {handleOnAdd} />
+                      ) : (
+                        <Link to="/cart" className='px-4 py-2 text-sm tracking-widest text-white duration-200 bg-red-600 rounded-lg hover:bg-red-400 transition-color focus:outline-none font-shadows'> Ir a mi carrito</Link>
+                      
                       )}
-
                       </div>
                 </div>
             </div>
-      </div>
-  
+      </div> 
   );
 };
 

@@ -1,38 +1,22 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable no-undef */
+
 import React, { useState } from "react"
-import { useCartContext } from "../context/CartContext"
 import { HiOutlineMinus } from "react-icons/hi";
 import { HiOutlinePlus } from "react-icons/hi";
 
 
-const ItemCount = (props) => {
-	const [count, setCount] = useState(1)
 
-	const { products } = useCartContext()
-	
+const ItemCount = ({ initial, stock, onAdd }) => {
+	const [count, setCount] = useState(initial)
 	
 	const handleAdd = () => {
-		if (count < props.stock) {
-			setCount(count + 1)
+		if (count < stock) {
+			setCount(count + 1);
 		}
 	}
 	const handleRemove = () => {
-		if (count > 1) {
-			setCount(count - 1)
+		if (count > initial) {
+			setCount(count - 1);
 		}
-	}
-
-	const handleClick = (id, cantidad) => {
-		const findProduct = products.find((producto) => producto.id === id)
-
-		if (!findProduct) {
-			alert("Error")
-			return
-		}
-
-		addToCart(findProduct, cantidad)
-		onAdd(count)
 	}
 
 	return (
@@ -48,16 +32,14 @@ const ItemCount = (props) => {
 					</button>
 				</div>
 				<div>
-					<button
-						className="px-4 py-2 text-sm tracking-widest text-white duration-200 bg-red-600 rounded-lg hover:bg-red-400 transition-color focus:outline-none font-shadows"
-						onClick={() => props.onAdd(count)}
-					>
+					<button onClick={() => onAdd(count)} 
+						className="px-4 py-2 text-sm tracking-widest text-white duration-200 bg-red-600 rounded-lg hover:bg-red-400 transition-color focus:outline-none font-shadows">
 						Agregar al Carrito
 					</button>
 				</div>
 			</div>
 		</>
-	)
-}
+	);
+};
 
-export default ItemCount
+export default ItemCount;
