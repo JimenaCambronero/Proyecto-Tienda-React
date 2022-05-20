@@ -21,7 +21,7 @@ const Item = ({ list }) => {
             </div>
             <hr className="w-full mb-4 border-gray-300" />
             <div className="flex justify-between border-gray-300">
-              <p className="inline-block pt-2 text-lg text-gray-700 font-boogaloo">{price}</p>
+              <p className="inline-block pt-2 text-lg text-gray-700 font-boogaloo">${price}</p>
              
               <button className="px-4 py-2 text-xs tracking-widest text-white duration-200 bg-red-600 rounded-lg hover:bg-red-400 transition-color font-shadows focus:outline-none"> 
               <Link to={`/detalleProducto/${id}`}>Ver mas detalle </Link>

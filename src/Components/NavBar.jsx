@@ -8,6 +8,7 @@ import LogoNavBar from './LogoNavBar';
 
 const NavBar = () => {
 
+
   const [show, setShow] = useState(false);
   
   const cambiarTexto =(e) => {
