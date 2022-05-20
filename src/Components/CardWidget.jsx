@@ -9,12 +9,9 @@ const CardWidget = () => {
  
   return (
 <NavLink to='/cart' className='flex items-center'> 
-<HiShoppingBag/>
-<span>{totalCount()}</span>
+  <HiShoppingBag className='text-2xl'/>
+  <span>{totalCount()}</span>
 </NavLink>
-
-
-    
   )
 }
 

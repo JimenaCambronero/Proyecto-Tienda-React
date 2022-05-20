@@ -1,12 +1,16 @@
 import { useCartContext } from '../context/CartContext';
 import React from 'react'
 import CartItem from "./CartItem";
+import CarritoVacio from './CarritoVacio';
 
 
 const Cart = () => {
     const { cartList, emptyCart, totalPrice } = useCartContext();
   
     return (
+
+    
+      
       <div>
         {cartList.map((item) => (
           <CartItem key={item.id} item={item} />
@@ -17,15 +21,14 @@ const Cart = () => {
             <h1>Precio total: ${totalPrice()}</h1>
           </>
         ) : (
-          <h1>El carrito esta vacio</h1>
+          <CarritoVacio/>
         )}
       </div>
+      
     );
   };
   
   export default Cart;
-
-
 
 
 

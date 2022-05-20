@@ -16,7 +16,7 @@ return (
             </iframe>
         </div>
         <div>
-            <h4 className="p-4 text-sm tracking-wider uppercase text-black-500">Cargando productos</h4>
+            <h4 className="p-4 text-lg tracking-wider uppercase text-black-500 font-shadows">Estamos cargando los productos...</h4>
         </div>
     </div>
 );
