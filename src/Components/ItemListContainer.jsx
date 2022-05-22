@@ -37,7 +37,7 @@ function ItemListContainer() {
       <>
       <div>
         {loading ?
-          <Spinner></Spinner>
+          <Spinner/>
           :
           <ItemList items={item} />
         }
