@@ -13,11 +13,15 @@ const ItemDetailContainer = () => {
   const {itemId } = useParams()
 
 
+
+
 useEffect(() => {
   const db = getFirestore();
+
   const itemsCollection = collection (db, 'items');
   getDocs (itemsCollection).then ((snapshot)=>{
     setItem (snapshot.docs.map((doc) =>({id: doc.id, ...doc.data() })));
+   
   });
 }, [itemId]) ;
  
