@@ -8,12 +8,8 @@ const CarritoVacio = () => {
   return (
     <div className="flex flex-col items-center justify-center max-w-full p-20 mx-auto lg:max-w-7xl lg:items-star">
         <div>
-            <iframe src="https://giphy.com/embed/5QTCH9HcixzA1STEs9" 
-            width="200" 
-            height="200"    
-            frameBorder="0" 
-            >
-            </iframe>
+
+        <iframe src="https://giphy.com/embed/d5J083vjsxXRbwnTqS" width="300" height="300" frameBorder="0" allowFullScreen></iframe>
         </div>
         <div className="items-center p-4 tracking-wider uppercase text-black-500 font-shadows">
             <p className='text-2xl'>Ups!!! ¡Parece que tu carrito esta vacio!</p>

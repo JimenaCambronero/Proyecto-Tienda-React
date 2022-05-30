@@ -7,6 +7,7 @@ import Cart from './Components/Cart';
 import NotFound404 from './Page/NotFound404';
 import Footer from './Components/Footer';
 import CartContextProvider from './context/CartContext';
+import Checkout from './Components/Checkout';
 
 
 function App() { 
@@ -17,19 +18,16 @@ function App() {
         <Navbar/>  
          
           <Routes>
-            <Route 
-                path='/'
-                element={<ItemListContainer/>}/>
+            <Route path='/' element={<ItemListContainer/>}/>
             <Route 
                 path='/detalleProducto/:itemId' 
                 element={<ItemDetailContainer />}/>
             <Route 
                 path='/category/:categoryId' 
                 element={<ItemListContainer/>}/>
-               <Route path="/cart" element={<Cart />} />   
-            <Route 
-                path='*' 
-                element= {<NotFound404/>}/>
+            <Route path="/cart" element={<Cart />} />   
+            <Route path='/checkout' element={<Checkout/>}/>  
+            <Route path='*' element= {<NotFound404/>}/>
           </Routes> 
             
         <Footer/>

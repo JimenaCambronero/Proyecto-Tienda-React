@@ -3,21 +3,24 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-
+import { getFirestore } from 'firebase/firestore';
 import { initializeApp } from "firebase/app";
 
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDlLUuMmqOVaUiX0ptTt62cUtUXuJ7bBkk",
-  authDomain: "tienda-react-3595d.firebaseapp.com",
-  projectId: "tienda-react-3595d",
-  storageBucket: "tienda-react-3595d.appspot.com",
-  messagingSenderId: "482620642488",
-  appId: "1:482620642488:web:2ca62f23918f9aef71104d"
-};
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  projectId:    process.env.REACT_APP_PROJECTID,
+  storageBucket:     process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId:   process.env.REACT_APP_MESSAGINGSENDERID,
+  appId:     process.env.REACT_APP_APPID,
+}
+
+
 
 
 const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

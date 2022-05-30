@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { collection, getDocs, query, where, getFirestore } from "firebase/firestore";
+import { collection, getDocs, query, where, getFirestore,} from "firebase/firestore";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 import Spinner from "./Spinner";
@@ -23,6 +23,7 @@ function ItemListContainer() {
           setItem(
               querySnapshot.docs.map((item) => {
                   return { ...item.data(), id: item.id }
+                  
               })
           )
           setLoading(false)

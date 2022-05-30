@@ -8,15 +8,9 @@ const Banner = () => {
           <div className="flex items-center justify-center">
             <span className='pt-2 pr-4 text-base font-bold tracking-widest uppercase font-shadows'>Gracias por visitar nuestra tienda, te esperamos nuevamenete! </span>      
           </div>
-          <div className=''>
-            <iframe 
-            src="https://giphy.com/embed/1ylcHJacqW2jjrYTxN"
-            frameBorder="0" 
-            width="100" 
-            height="100"
-            allowFullScreen
-            ></iframe>
-            </div>
+  
+          <iframe src="https://giphy.com/embed/POInrdakrvxdicK9Ym" width="100" height="100" frameBorder="0" allowFullScreen></iframe>
+            
       </div>
    )
 };

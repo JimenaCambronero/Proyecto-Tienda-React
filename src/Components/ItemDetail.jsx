@@ -26,7 +26,7 @@ const ItemDetail = ({item, id, stock}) => {
                 <div className="w-full px-6 lg:py-6 lg:w-1/2">
                       <h1 className="pb-3 text-lg font-medium tracking-wider text-gray-800 uppercase font-boogaloo"> {item.name} </h1>
                       <p className="font-boogaloo">${item.price}</p>
-                      <p className="pt-2 text-sm tracking-wider text-gray-700 uppercase font-amastic"> Categoria:{item.category}</p>
+                      <p className="pt-2 text-sm font-bold tracking-wider text-gray-700 uppercase font-amastic"> Categoria:{item.category}</p>
                       <p className="pt-3 pb-2 text-base font-medium tracking-wider text-gray-700 uppercase font-boogaloo">
                         Descripción
                       </p>

@@ -21,7 +21,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="bg-gray-300">
+      <div className="bg-gray-200">
         <div className="relative max-auto">
           <div className="pt-1 mx-7">
             <div className="flex items-center justify-between px-10 pb-2 border-b border-gray-200">
@@ -45,7 +45,7 @@ const NavBar = () => {
               {/* <BurguerButton/> */}
             </div>
           </div>
-          <hr className="w-full mb-1 border-gray-400" />
+          <hr className="w-full mb-1 border-gray-300" />
           <div>
             {show ? (
               <ul className="flex justify-center py-2 space-x-6 text-xs font-medium tracking-widest text-gray-600 uppercase select-none font-boogaloo ">
