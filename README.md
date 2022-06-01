@@ -1,5 +1,6 @@
 # Simon´s Cats Tienda 🐱
 
+
 ## Datos
 
 * **Curso:** React / Coderhouse
@@ -10,7 +11,7 @@
 
 * **Tutor:** Flavio Gastón Dante
 
-* **Desarrollado por la estudiante:** JImena Gisele Cambronero
+* **Desarrollado por la estudiante:** Jimena Gisele Cambronero
 
 * **Proyecto final:** https://jimenacambronero.github.io/ProyectoTiendaReact/
 
