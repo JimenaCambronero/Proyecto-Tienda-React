@@ -21,6 +21,8 @@
 * **React**
 * **TailwindCSS**
 
+La configuración de firebase esta en variables de entorno. Para correrlo localmente solicitar las llaves.
+
 ### Gestor de paquetes
 
 * **npm**
