@@ -11,10 +11,6 @@ const Cart = () => {
   
 return (
 <>
-  {/* {totalCount () === 0 ? (
-    <CarritoVacio></CarritoVacio>
-  ): (
-  */}
       <h2 className='self-center p-6 leading-tight tracking-wider text-center text-gray-800 uppercase md:text-2xl sm:text-xl font-amastic'>Mi Carrito</h2>
 
       {totalCount () === 0 ? (

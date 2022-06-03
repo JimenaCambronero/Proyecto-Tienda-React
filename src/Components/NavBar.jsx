@@ -21,7 +21,7 @@ const NavBar = () => {
     <>
     <div className='flex items-center justify-around p-2 bg-red-600 lg:flex-row lg:max-w-7xl '>
          <Link to="/" className="block w-60"> <LogoNavBar/> </Link>  
-            <h1 className='pt-4 pb-4 text-2xl font-bold tracking-widest uppercase font-shadows'>Simon´s Cat Shop</h1>
+            <Link to='/' className='pt-4 pb-4 text-2xl font-bold tracking-widest uppercase font-shadows'>Simon´s Cat Shop</Link>
       <CardWidget/>
     </div>
 

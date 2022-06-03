@@ -14,7 +14,7 @@
 
 * **Desarrollado por la estudiante:** Jimena Gisele Cambronero
 
-* **Proyecto final:** https://proyecto-tienda-react.vercel.app/
+* **Proyecto final:** https://proyecto-tienda-react-jimenacambronero.vercel.app/
 
 ### Librerías y frameworks
 
