@@ -3,8 +3,6 @@ import {HiShoppingBag} from "react-icons/hi"
 import { NavLink } from 'react-router-dom';
 import { useCartContext } from '../context/CartContext'
 
-
-
 const CardWidget = () => {
   const { totalCount } = useCartContext ();
  

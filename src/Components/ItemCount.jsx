@@ -3,7 +3,6 @@ import React, { useState } from "react"
 import { HiOutlineMinus } from "react-icons/hi";
 import { HiOutlinePlus } from "react-icons/hi";
 
-
 const ItemCount = ({ initial, stock, onAdd }) => {
 	const [count, setCount] = useState(initial)
 	

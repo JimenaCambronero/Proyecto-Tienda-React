@@ -33,7 +33,6 @@ const NavBar = () => {
                       <li>
                           <button onClick={() => setShow(!show)} 
                              className="p-2 text-base tracking-widest text-gray-800 uppercase font-boogaloo focus:outline-none"> 
-                             
                              <p onClick ={cambiarTexto} >Ver Categorias</p>
                           </button>
                       </li>

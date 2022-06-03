@@ -2,12 +2,9 @@
 import React from 'react'
 
 const LogoNavBar = () => {
+
   return (
-    
-  <iframe src="https://giphy.com/embed/gFWQqt8FzWQea84q3R" width="60" height="60" frameBorder="0" allowFullScreen></iframe>
-
-
-
+     <iframe src="https://giphy.com/embed/gFWQqt8FzWQea84q3R" width="60" height="60" frameBorder="0" allowFullScreen></iframe>
   )
 }
 

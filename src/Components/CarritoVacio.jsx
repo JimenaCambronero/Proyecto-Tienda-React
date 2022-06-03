@@ -5,7 +5,7 @@ import {HiArrowNarrowLeft} from 'react-icons/hi'
 
 const CarritoVacio = () => {
   return (
-    <div className="flex flex-col items-center justify-center max-w-full p-20 mx-auto lg:max-w-7xl lg:items-star">
+    <div className="flex flex-col items-center justify-center max-w-full p-6 mx-auto lg:max-w-7xl lg:items-star">
         <div>
 
         <iframe src="https://giphy.com/embed/d5J083vjsxXRbwnTqS" width="300" height="300" frameBorder="0" allowFullScreen></iframe>
