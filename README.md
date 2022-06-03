@@ -1,5 +1,5 @@
-# Simon´s Cats Tienda 🐱
-
+# Simon´s Cats Tienda 
+<img src='./assets./imagenes./logo.svg' >
 ## Datos
 
 * **Curso:** React / Coderhouse

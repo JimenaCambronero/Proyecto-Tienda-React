@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-//producto presentacion
-
 const Item = ({ list }) => {
   const { id, name, price, description, img } = list;
 

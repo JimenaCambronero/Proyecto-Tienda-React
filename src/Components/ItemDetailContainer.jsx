@@ -19,7 +19,7 @@ useEffect(() => {
   getDoc (itemsCollection).then ((snapshot)=>{
   const cat={ id: snapshot.id, ...snapshot.data()}
   setItem (cat)
-   
+  setLoading(false)
   });
 }, [itemId]) ;
  

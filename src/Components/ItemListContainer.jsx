@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { collection, getDocs, query, where, getFirestore,} from "firebase/firestore";
+import React, {  useEffect, useState } from "react";
+import { collection, getDocs, query, where, getFirestore, orderBy } from "firebase/firestore";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 import Spinner from "./Spinner";
@@ -18,7 +18,8 @@ function ItemListContainer() {
           setLoading (true)
           const myItem = categoryId
               ? query(collection(db, "items"), where("category", "==", categoryId))
-              : collection(db, "items")
+              :query(collection (db, 'items'), orderBy('category', 'desc'))
+                         
           const querySnapshot = await getDocs(myItem)
           setItem(
               querySnapshot.docs.map((item) => {
@@ -36,7 +37,7 @@ function ItemListContainer() {
   return (
     
       <>
-      <div>
+      <div className="bg-gradient-to-b from-gray-100">
         {loading ?
           <Spinner/>
           :

@@ -4,7 +4,6 @@ import { HiOutlineMinus } from "react-icons/hi";
 import { HiOutlinePlus } from "react-icons/hi";
 
 
-
 const ItemCount = ({ initial, stock, onAdd }) => {
 	const [count, setCount] = useState(initial)
 	
@@ -36,6 +35,8 @@ const ItemCount = ({ initial, stock, onAdd }) => {
 						className="px-4 py-2 text-sm tracking-widest text-white duration-200 bg-red-600 rounded-lg hover:bg-red-400 transition-color focus:outline-none font-shadows">
 						Agregar al Carrito
 					</button>
+				
+			
 				</div>
 			</div>
 		</>
